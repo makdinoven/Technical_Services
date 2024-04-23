@@ -6,3 +6,5 @@ if(!$conn){
 } else {
     echo "norm";
 }
+
+echo '<h1>HELLO NIGER</h1>';
