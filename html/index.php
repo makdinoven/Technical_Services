@@ -6,7 +6,7 @@ require "new_request.php"
 <h1>Заявка для технической службы</h1>
 </div>
 
-<form class="index_form" id="indexForm" action="scripts/new_request.php" name="index" method="post"">
+<form class="index_form" id="indexForm" action="new_request.php" name="index" method="post"">
     <div class="name">
     <input required placeholder="Ваше имя..." type="text" name="name">
     </div>

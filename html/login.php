@@ -22,7 +22,6 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Успешная авторизация
-    $_SESSION['username'] = $username; // Сохраняем имя пользователя в сессии
     header("Location: admin.php"); // Перенаправляем на следующую страницу
     exit();
 }
@@ -34,5 +33,5 @@ $conn->close();
 <div class="heading">
     <h1>НЕВЕРНЫЙ ЛОГИН ИЛИ ПАРОЛЬ</h1>
 </div>
-<div class="texts info" onclick="location.href='sigin.php'">Вернуться назад</div>
+<div class="info texts" style="justify-content: center" onclick="location.href='sigin.php'">Вернуться назад</div>
 
