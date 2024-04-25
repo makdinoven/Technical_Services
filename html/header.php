@@ -1,12 +1,6 @@
 <?php
 
-$conn=mysqli_connect("mysql","root","root", "application");
-
-if(!$conn){
-    echo "Connection error";
-} else{
-    echo "Connected successfully";
-}
+echo"я здесь";
 
 ?>
 
@@ -25,13 +19,11 @@ if(!$conn){
 </head>
 <body>
 <header>
-    <div class="header_container">
         <div class="bsu_logo">
             <img src="img/bsu.png">
         </div>
         <div class="him_logo">
             <img src="img/bsu.png">
         </div>
-    </div>
 </header>
 

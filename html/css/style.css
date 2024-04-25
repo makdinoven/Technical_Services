@@ -7,6 +7,7 @@ body{
     filter: blur(57.79999923706055px);
     background: rgba(0, 0, 0, 0.21);
     height: 315px;
+    position: relative;
 }
 
 .bsu_logo{

@@ -1,26 +1,27 @@
 <?php
 require "header.php";
+require "new_request.php"
 ?>
 <div class="heading">
 <h1>Заявка для технической службы</h1>
 </div>
 
-<form class="index_form" action="request.php" name="index">
+<form class="index_form" id="indexForm" action="new_request.php" name="index" method="post"">
     <div class="name">
-    <input placeholder="Ваше имя..." type="text" name="name">
+    <input required placeholder="Ваше имя..." type="text" name="name">
     </div>
     <div class="number">
-    <input placeholder="Аудитория..." type="text">
+    <input required placeholder="Аудитория..." type="text" name="number">
     </div>
     <div class="phone">
-    <input placeholder="Номер  телефона..." type="text">
+    <input required placeholder="Номер  телефона..." type="text" name="phone">
     </div>
     <div class="textarea">
-    <input placeholder="Что случилось?" type="text">
+    <input required placeholder="Что случилось?" type="text" name="textarea">
     </div>
     <div class="buttons">
-    <div class="button ">Прикрепить фото</div>
-    <button type="submit" class="button button-big">ОТПРАВИТЬ</button>
+        <div class="button"><input type="file">Прикрепить фото</div>
+    <button type="submit" class="button button-big" id="submitButton">ОТПРАВИТЬ</button>
     </div>
     <div class="texts">
     <div class="info">
@@ -31,7 +32,9 @@ require "header.php";
         Я администратор
     </div>
     </div>
+    <!-- Добавляем элемент для сообщения об успешной отправке -->
 </form>
+
 <?php
 require "footer.php";
 ?>
