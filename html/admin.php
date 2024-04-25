@@ -26,7 +26,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 // Выводим заголовки таблицы
 echo "<table border='1' class='table'>
-    <tr class='head_table'>
+    <tr>
         <th>ФИО</th>
         <th>АУДИТОРИЯ</th>
         <th>ТЕЛЕФОН</th>
@@ -60,4 +60,9 @@ echo "0 results";
 
 // Закрытие соединения с базой данных
 $conn->close();
-
+?>
+<div class="buttons">
+    <div class="button">В РАБОТЕ</div>
+    <div class="button">ЗАВЕРШЕННЫЕ</div>
+    <div class="button">КОРЗИНА</div>
+</div>

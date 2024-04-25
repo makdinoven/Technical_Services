@@ -6,7 +6,7 @@ require "new_request.php"
 <h1>Заявка для технической службы</h1>
 </div>
 
-<form class="index_form" id="indexForm" action="new_request.php" name="index" method="post"">
+<form class="index_form" id="indexForm" action="new_request.php" name="index" method="post" enctype="multipart/form-data">
     <div class="name">
     <input required placeholder="Ваше имя..." type="text" name="name">
     </div>
@@ -20,7 +20,9 @@ require "new_request.php"
     <input required placeholder="Что случилось?" type="text" name="textarea">
     </div>
     <div class="buttons">
-        <div class="button"><input type="file">Прикрепить фото</div>
+        <div class="button">
+            <label for="fileInput">Прикрепить фото</label>
+            <input type="file" id="fileInput" name="image"></div>
     <button type="submit" class="button button-big" id="submitButton">ОТПРАВИТЬ</button>
     </div>
     <div class="texts">

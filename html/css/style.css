@@ -117,6 +117,10 @@ button{
     display: flex;
     justify-content: space-between;
 }
+
+.button input[type=file] {
+    display: none; /* Скрыть поле выбора файла */
+}
 .info{
     width: 240px;
     display: flex;
@@ -140,14 +144,32 @@ button{
     color:white;
 }
 .table {
+
     border-collapse: collapse;
     display: flex;
     justify-content: center;
     border-radius: 30px 30px 30px 30px;
 }
+th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
 
-.head_table{
+/* Закругление границ строк таблицы */
+tr {
+border-radius: 30px;
+}
+
+/* Стили для первой строки (заголовков) таблицы */
+tr:first-child {
     border-radius:30px ;
+    overflow: hidden;
+    background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+
+}
+.head_table{
+
     background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
 }
 
