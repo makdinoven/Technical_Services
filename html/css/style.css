@@ -61,7 +61,15 @@ button{
 }
 .textarea{
     width: 954px;
-    height: 160px;
+    height: 160px;}
+
+.login{
+    width: 310px;
+    height: 75px;
+}
+.password{
+    width: 310px;
+    height: 75px;
 }
 
 .index_form{
@@ -72,6 +80,16 @@ button{
     height: 436px;
     margin: 0 auto;
 }
+
+.login_form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 310px;
+    height: 310px;
+    margin: 0 auto;
+}
+
 .button{
     border-radius: 32px;
     box-shadow: 5px 6px 4px 0 rgba(0, 0, 0, 0.25);
@@ -82,6 +100,11 @@ button{
     justify-content: center;
     align-items: center;
     height: 75px;
+}
+
+.button-login{
+    width: 310px;
+    font-size: 20px;
 }
 
 .button-big{
@@ -116,4 +139,6 @@ button{
 .heading{
     color:white;
 }
+
+
 
