@@ -158,12 +158,12 @@ th, td {
 
 /* Закругление границ строк таблицы */
 tr {
-border-radius: 30px;
+/*border-radius: 30px;*/
 }
 
 /* Стили для первой строки (заголовков) таблицы */
 tr:first-child {
-    border-radius:30px ;
+    /*border-radius:30px ;*/
     overflow: hidden;
     background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
 

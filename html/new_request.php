@@ -52,8 +52,8 @@ if(isset($_FILES['image'])) {
     if(move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
         // Файл успешно загружен
         // Теперь можно сохранить путь к файлу в базу данных
-        $sql = "INSERT INTO request (photo) VALUES ('$filename')";
-        if($conn->query($sql) === TRUE) {
+        $sql_two = "INSERT INTO request (photo) VALUES ('$filename')";
+        if($conn->query($sql_two) === TRUE) {
             echo "Изображение успешно загружено и сохранено в базе данных.";
         } else {
             echo "Ошибка при сохранении в базу данных: " . $conn->error;
