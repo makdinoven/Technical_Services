@@ -8,7 +8,7 @@ function moveData(id) {
             // Обработка успешного ответа от сервера (если нужно)
             console.log(xhr.responseText);
             // Перезагрузка страницы или другие действия (если нужно)
-            // location.reload();
+            location.reload();
         } else {
             // Обработка ошибки (если нужно)
             console.error('Ошибка при выполнении AJAX-запроса: ' + xhr.statusText);

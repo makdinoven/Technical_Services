@@ -1,10 +1,7 @@
-function movetocompleted(id) {
-    // Получение текста комментария из поля ввода
-    var comment = document.getElementById('comment_input_' + id).value;
-
-    // Выполнение AJAX-запроса для передачи идентификатора строки и текста комментария на сервер
+function backdata(id) {
+    // Выполнение AJAX-запроса для передачи идентификатора строки на сервер
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'to_completed.php');
+    xhr.open('POST', 'to_request.php');
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = function() {
         if (xhr.status === 200) {
@@ -21,6 +18,6 @@ function movetocompleted(id) {
         // Обработка ошибки (если нужно)
         console.error('Ошибка при выполнении AJAX-запроса');
     };
-    // Отправка идентификатора строки и текста комментария на сервер
-    xhr.send('id=' + id + '&comment=' + encodeURIComponent(comment));
+    // Отправка идентификатора строки на сервер
+    xhr.send('id=' + id);
 }
