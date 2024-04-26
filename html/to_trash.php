@@ -21,16 +21,21 @@ $id = $_POST['id'];
 var_dump($_POST);
 
 // Получение данных из текущей строки
-$sql_select = "SELECT description FROM request WHERE id_request = $id";
+$sql_select = "SELECT * FROM request WHERE id_request = $id";
 $result = $conn->query($sql_select);
 
 if ($result->num_rows > 0) {
     // Получение данных из результата запроса
     $row = $result->fetch_assoc();
     $description = $row['description'];
+    $time=$row['time'];
+    $name= $row['name'];
+    $phone= $row['phone'];
+    $photo= $row['photo'];
+    $cabinet= $row['cabinet'];
 
     // Перемещение данных в таблицу in_work
-    $sql_move = "INSERT INTO trash (id_request, description) VALUES ('$id', '$description')";
+    $sql_move = "INSERT INTO trash (id_request, description,time,name,phone,photo,cabinet) VALUES ('$id', '$description','$time','$name','$phone','$photo','$cabinet')";
     if ($conn->query($sql_move) === TRUE) {
         // Успешное перемещение данных
         echo "Данные успешно перемещены в таблицу in_work!";
