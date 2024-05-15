@@ -203,8 +203,9 @@ td{
 }
 
 .freq{
-    width: 500px;
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 .filters_container{
     display: flex;

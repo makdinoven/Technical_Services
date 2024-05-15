@@ -100,7 +100,7 @@ echo '<div class="freq" id="frequentRooms" style="display: none;">';
     $sql_frequent = "SELECT cabinet, COUNT(*) as request_count FROM completed GROUP BY cabinet ORDER BY request_count DESC";
     $result_frequent = $conn->query($sql_frequent);
 
- echo "<h1>yyyy</h1>";
+ echo "<h1 class='heading'>Самые частые аудитории</h1>";
     if ($result_frequent->num_rows > 0) {
         echo "<table class='table'>
         <tr>
