@@ -25,7 +25,7 @@ $result = $conn->query($sql);
 // Проверяем, есть ли данные в результате запроса
 if ($result->num_rows > 0) {
 // Выводим заголовки таблицы
-    echo "<table border='1' class='table'>
+    echo "<table class='table'>
     <tr>
         <th>ID ЗАЯВКИ</th>
         <th>ОПИСАНИЕ</th>
@@ -42,10 +42,10 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<tr>
         <td>" . $row['id_request'] . "</td>
+        <td>" . $row["description"] . "</td>
         <td>" . $row["name"] . "</td>
         <td>" . $row["cabinet"] . "</td>
         <td>" . $row["phone"] . "</td>
-        <td>" . $row["description"] . "</td>
         <td>" . $row["time"] . "</td>";
 
         // Проверяем, есть ли ссылка на изображение в столбце "photo"
@@ -57,7 +57,7 @@ if ($result->num_rows > 0) {
             echo "<td>Нет изображения</td>";
         }
         // Добавляем поле ввода комментария
-        echo "<td><input type='text' id='comment_input_" . $row["id_request"] . "'></td>";
+        echo "<td><input style='width: 250px' type='text' id='comment_input_" . $row["id_request"] . "'></td>";
 
         // Добавляем кнопку для перемещения в завершенные
         echo "<td class='accept'><button onclick='movetocompleted(" . $row["id_request"] . ")'>Завершить</button></td>

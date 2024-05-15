@@ -25,7 +25,8 @@ $result = $conn->query($sql);
 // Проверяем, есть ли данные в результате запроса
 if ($result->num_rows > 0) {
 // Выводим заголовки таблицы
-echo "<table border='1' class='table'>
+echo "
+<table border='1' class='table'>
     <tr>
         <th>ID</th>
         <th>ФИО</th>

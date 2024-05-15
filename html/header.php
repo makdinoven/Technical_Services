@@ -1,6 +1,5 @@
 <?php
 
-echo"я здесь";
 
 ?>
 
@@ -18,12 +17,12 @@ echo"я здесь";
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
+<header class="header">
         <div class="bsu_logo">
             <img src="img/bsu.png">
         </div>
         <div class="him_logo">
-            <img src="img/bsu.png">
+            <img src="img/logo.png">
         </div>
 </header>
 

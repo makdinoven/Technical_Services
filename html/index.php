@@ -25,6 +25,7 @@ require "new_request.php"
             <input type="file" id="fileInput" name="image"></div>
     <button type="submit" class="button button-big" id="submitButton">ОТПРАВИТЬ</button>
     </div>
+    <div id="fileMessage"></div>
     <div class="texts">
     <div class="info">
     <div class="text">+375 (29) 89-205-74</div>
@@ -36,7 +37,17 @@ require "new_request.php"
     </div>
     <!-- Добавляем элемент для сообщения об успешной отправке -->
 </form>
-
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function() {
+            var fileMessage = document.getElementById('fileMessage');
+            if (this.files.length > 0) {
+                fileMessage.textContent = 'Фотография успешно выбрана '
+                fileMessage.style.color = 'green';
+            } else {
+                fileMessage.textContent = 'Вложений нет';
+            }
+        });
+    </script>
 <?php
 require "footer.php";
 ?>
