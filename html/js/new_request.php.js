@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert('Данные успешно отправлены!');
 
                 // Очищаем поля формы (если нужно)
-                form.reset();
+                location.reload();
             } else {
                 // Обрабатываем ошибку (если нужно)
                 console.error('Ошибка при отправке данных: ' + xhr.statusText);
