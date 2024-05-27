@@ -41,16 +41,17 @@ $sql .= " ORDER BY start_time $order";
 $result = $conn->query($sql);
 
 echo '<div class="filters_container"> <form class="filters" method="post" action="">
-    <div class="form_buttons"><button type="submit" name="sort_oldest">Сортировать по старым записям</button>
-    <button type="submit" name="sort_newest">Сортировать по новым записям</button>
-    <button style="background-color:#ffb8df" type="button" onclick="toggleFrequentRooms()">Показать/Скрыть частые аудитории</button>
+    <div class="form_buttons">
+    <button class="oldest" type="submit" name="sort_oldest">Сортировать по старым записям</button>
+    <button class="oldest" type="submit" name="sort_newest">Сортировать по новым записям</button>
+    <button class="popular" type="button" onclick="toggleFrequentRooms()">Показать/Скрыть частые аудитории</button>
     </div> 
     <div class="date_filter">
     <label for="start_date">Начальная дата:</label>
     <input class="date" type="date" id="start_date" name="start_date" >
     <label for="end_date">Конечная дата:</label>
     <input class="date" type="date" id="end_date" name="end_date">
-    <button style="width: 160px;height: 40px" type="submit">Фильтровать по дате</button>
+    <button class="date_filter_button" style="width: 160px;height: 40px" type="submit">Фильтровать по дате</button>
     </div>
 </form>
  <div class="button button_reset" onclick="resetFilters()">Сбросить все фильтры</div></div>';

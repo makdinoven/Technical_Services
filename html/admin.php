@@ -26,7 +26,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 // Выводим заголовки таблицы
 echo "
-<table border='1' class='table'>
+<table border='0' class='table'>
     <tr>
         <th>ID</th>
         <th>ФИО</th>

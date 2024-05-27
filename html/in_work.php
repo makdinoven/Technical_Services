@@ -57,7 +57,7 @@ if ($result->num_rows > 0) {
             echo "<td>Нет изображения</td>";
         }
         // Добавляем поле ввода комментария
-        echo "<td><input style='width: 250px' type='text' id='comment_input_" . $row["id_request"] . "'></td>";
+        echo "<td><input class='comment_input' placeholder='Введите коментарий' style='width: 250px; height: 30px' type='text' id='comment_input_" . $row["id_request"] . "'></td>";
 
         // Добавляем кнопку для перемещения в завершенные
         echo "<td class='accept'><button onclick='movetocompleted(" . $row["id_request"] . ")'>Завершить</button></td>

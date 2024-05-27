@@ -3,6 +3,26 @@ body{
     background: linear-gradient(90deg, #a6c0fe 0%, #f68084 100%);
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .header_container{
     filter: blur(57.79999923706055px);
     background: rgba(0, 0, 0, 0.21);
@@ -96,6 +116,7 @@ button{
     width: 310px;
     height: 310px;
     margin: 0 auto;
+    animation: slideInFromTop 1s ease-in-out;
 }
 
 .button{
@@ -108,6 +129,11 @@ button{
     justify-content: center;
     align-items: center;
     height: 75px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #917be2; /* Цвет кнопки при наведении */
 }
 
 .button-login{
@@ -153,13 +179,14 @@ button{
 .heading{
     color:white;
     padding-bottom: 50px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 .table {
-
     border-collapse: collapse;
     display: flex;
     justify-content: center;
     border-radius: 30px 30px 30px 30px;
+    animation: slideInFromTop 0.5s ease-in-out;
 }
 th, td {
     padding: 8px;
@@ -186,10 +213,27 @@ tr:first-child {
 
 .accept{
     background-color: aquamarine;
+    cursor: pointer;
+}
+.accept:hover{
+    background-color: #55dfc9;
 }
 
 .trash{
     background-color: crimson;
+    cursor: pointer;
+}
+
+.trash:hover{
+    background-color: #ef5862;
+}
+
+.back{
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+.back:hover{
+    background-color: #8da1f1;
 }
 
 td{
@@ -197,9 +241,11 @@ td{
 }
 
 .date{
-    width: 120px;
+    width: 110px;
     height: 40px;
     font-size: 12px;
+    border-radius: 5px;
+    box-shadow: none;
 }
 
 .freq{
@@ -229,4 +275,34 @@ td{
 
 .date_filter{
     margin: 10px;
+}
+
+button{
+    background: none;
+    color: black;
+    font-size: 14px;
+
+}
+.button{
+    animation: fadeIn 1s ease-in-out;
+}
+.comment_input{
+    border-radius: 5px;
+    box-shadow: none;
+    font-size: 16px;
+}
+
+.oldest:hover{
+    background-color: #c1baa4;
+}
+.popular{
+    background-color:#ffb8df
+}
+
+.popular:hover{
+     background-color: #f68cc6;
+ }
+
+.date_filter_button:hover{
+    background-color: #c1baa4;
 }

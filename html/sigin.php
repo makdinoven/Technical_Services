@@ -16,7 +16,7 @@ require "header.php";
         Вернуться назад
     </div>
 </form>
-<div id="errorMessage" style="color: red; display: none;">Invalid username or password.</div>
+<div id="errorMessage" style="color: red; display: none;">Неверный логин или пароль</div>
 <?php
 require "footer.php";
 ?>
